@@ -1,0 +1,15 @@
+current directory: /home/miji/Desktop/sprint4/sprint4/vendor/bundle/ruby/3.0.0/gems/bindex-0.8.1/ext/skiptrace
+/usr/bin/ruby3.0 -I /usr/lib/ruby/vendor_ruby -r ./siteconf20221224-44150-71yw6a.rb extconf.rb
+creating Makefile
+
+current directory: /home/miji/Desktop/sprint4/sprint4/vendor/bundle/ruby/3.0.0/gems/bindex-0.8.1/ext/skiptrace
+make DESTDIR\= clean
+
+current directory: /home/miji/Desktop/sprint4/sprint4/vendor/bundle/ruby/3.0.0/gems/bindex-0.8.1/ext/skiptrace
+make DESTDIR\=
+compiling cruby.c
+linking shared-object skiptrace/internal/cruby.so
+
+current directory: /home/miji/Desktop/sprint4/sprint4/vendor/bundle/ruby/3.0.0/gems/bindex-0.8.1/ext/skiptrace
+make DESTDIR\= install
+/usr/bin/install -c -m 0755 cruby.so ./.gem.20221224-44150-f6jvpu/skiptrace/internal
