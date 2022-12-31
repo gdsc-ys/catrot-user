@@ -10,30 +10,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_12_24_073312) do
+ActiveRecord::Schema[7.0].define(version: 2022_12_30_153434) do
   # These are extensions that must be enabled in order to support this database
-  enable_extension "btree_gin"
-  enable_extension "btree_gist"
-  enable_extension "citext"
-  enable_extension "cube"
-  enable_extension "dblink"
-  enable_extension "dict_int"
-  enable_extension "dict_xsyn"
-  enable_extension "earthdistance"
-  enable_extension "fuzzystrmatch"
-  enable_extension "hstore"
-  enable_extension "intarray"
-  enable_extension "ltree"
-  enable_extension "pg_stat_statements"
-  enable_extension "pg_trgm"
-  enable_extension "pgcrypto"
-  enable_extension "pgrowlocks"
-  enable_extension "pgstattuple"
   enable_extension "plpgsql"
-  enable_extension "tablefunc"
-  enable_extension "unaccent"
-  enable_extension "uuid-ossp"
-  enable_extension "xml2"
 
   create_table "action_text_rich_texts", force: :cascade do |t|
     t.string "name", null: false
@@ -82,7 +61,10 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_24_073312) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "nickname"
+    t.string "phone_num"
+    t.float "manner", default: 36.5
     t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["phone_num"], name: "index_users_on_phone_num", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 

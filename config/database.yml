@@ -7,10 +7,10 @@
 
 default: &default
   adapter: postgresql
-  database: vfqeecqf
-  user: vfqeecqf
-  password: ENV['POSTGRESQL_PASSWORD']
-  host: floppy.db.elephantsql.com
+  database: sprint4
+  user: dbmasteruser
+  password: CWiii7j0Y!NR)|V~AlNJqvh`d;e3R6}t
+  host: ls-df7675c44e5cc74cd642d1fc2ed71c38a0db854c.cxmle2eik3fl.ap-northeast-2.rds.amazonaws.com
   port: 5432
   pool: 5
   timeout: 5000
