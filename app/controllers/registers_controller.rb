@@ -1,5 +1,3 @@
-require './app'
-
 class RegistersController < Devise::RegistrationsController
     def new
       @user = User.new()
@@ -23,7 +21,7 @@ class RegistersController < Devise::RegistrationsController
 
     private
     def user_params
-      params.require(:user).permit(:nickname, :email, :image)
+      params.require(:user).permit(:nickname, :email, :image, :phone_num)
     end
 end
 
