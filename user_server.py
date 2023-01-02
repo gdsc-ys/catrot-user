@@ -13,7 +13,6 @@ db = psycopg2.connect(
         database="",
         user="",
         password="",
-
 )
 
 
@@ -44,7 +43,7 @@ def serve():
     port = '50051'
     server = grpc.server(futures.ThreadPoolExecutor(max_workers=10))
     users_pb2_grpc.add_FunctionsServicer_to_server(UserService(), server)
-    server.add_insecure_port('[::]:' + port)
+    server.add_insecure_port('0.0.0.0:' + port)
     server.start()
     print("Server started, listening on " + port)
     server.wait_for_termination()
